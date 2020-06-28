@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="./randompass.js"></script>
+
+    <style>
+        body {
+            text-align: center;
+            background-color: #333;
+            color: rgb(218, 215, 235);
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        button {
+            padding: 5px;
+            background-color: #333;
+            color: rgb(218, 215, 235);
+            border: solid rgba(28, 114, 194, 0.829) 2px;
+            border-radius: 5px;
+            transition-duration: .5s;
+            font-weight: 600;
+            outline: none;
+        }
+
+        button:hover {
+            color: rgba(34, 142, 243, 0.829);
+            border-color: rgb(218, 215, 235);
+        }
+    </style>
+    <script>
+        function pass() {
+
+            const pass = generatePass({
+                length: 20,
+                lower: true,
+                upper: true,
+                number: true,
+                symbols: true
+
+            });
+            document.getElementById('pass').innerHTML = pass;
+        }
+    </script>
+    <title>Password</title>
+</head>
+
+<body>
+    <h1>Generate Password</h1>
+    <h3 id="pass">please click the button</h3>
+    <button onclick="pass()">Generate</buttonstyle="text-align: center;">
+</body>
+
+</html>
